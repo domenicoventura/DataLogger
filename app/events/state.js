@@ -128,7 +128,7 @@ $(document).ready(function(){
             data : form_data,
             success : function(result) {
                 // state was updated, go back to events list
-                // showEventsFirstPage();
+                //showEventsFirstPage();
                 //active = 1;
             },
             error: function(xhr, resp, text) {

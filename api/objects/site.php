@@ -54,7 +54,7 @@ class Site{
     // set state calling api and update record
     function update(){
     
-        $url = "http://localhost:8000/state";
+        $url = "http://matt.zapto.org:8000/state";
         $record = array("id_site"=>$this->id_site, "timeout"=>$this->timeout, "state"=>$this->state);
         $content = json_encode($record);
 
