@@ -103,23 +103,20 @@ def toggle():
         led.on()
         print("Started.")
         signal.alarm(0)
-        signal.alarm(int(timeout))
+        signal.alarm(int(timeout)-1)
         set_state(1)
 
 button.when_pressed = toggle
 
 while True:
     if active:
-        led.on()
-        signal.alarm(int(timeout))
+        signal.alarm(int(timeout)-1)
     else:
-        led.off()
         signal.alarm(0)
     
     try:
         while active:
             if not(active):
-                led.off()
                 signal.alarm(0)
     except Exception:
         read_one()
