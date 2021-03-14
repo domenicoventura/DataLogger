@@ -21,15 +21,15 @@ $site = new Site($db);
 $data = json_decode(file_get_contents("php://input"));
   
 // set ID property of site to be edited
-$site->id_site = $data->id_site;
+$site->id_site = strval($data->id_site);
   
 // set site property values
 //$site->name = $data->name;
-$site->timeout = $data->timeout;
+$site->timeout = strval($data->timeout);
 if (isset($data->state))  {
-    $site->state = ($data->state === "on") ? 1 : ($data->state === 1) ? 1 : 0 ;
+    $site->state = ($data->state === "on") ? "1" : ($data->state === 1) ? "1" : "0" ;
 }   else    {
-    $site->state = 0;
+    $site->state = "0";
 }
 
 //$site->state = $data->state;

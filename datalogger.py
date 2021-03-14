@@ -123,3 +123,4 @@ while True:
                 signal.alarm(0)
     except Exception:
         read_one()
+    time.sleep(1)
