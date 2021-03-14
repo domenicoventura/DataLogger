@@ -28,7 +28,9 @@ class Event{
                 FROM
                     " . $this->table_name . " p
                 ORDER BY
-                    p.datatime ASC";
+                    p.datatime ASC
+                LIMIT
+                    1000";
     
         // prepare query statement
         $stmt = $this->conn->prepare($query);
