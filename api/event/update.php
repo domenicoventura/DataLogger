@@ -24,12 +24,9 @@ $data = json_decode(file_get_contents("php://input"));
 $event->id_event = $data->id_event;
   
 // set event property values
-$event->id_site = $data->id_site;
 $event->datatime = $data->datatime;
 $event->temp_indoor = $data->temp_indoor;
-$event->temp_outdoor = $data->temp_outdoor;
 $event->humid_indoor = $data->humid_indoor;
-$event->humid_outdoor = $data->humid_outdoor;
   
 // update the event
 if($event->update()){
